@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+
+# Local databases
+instance/*.db
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
