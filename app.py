@@ -34,6 +34,10 @@ def shorten_url():
 def home():
     if request.method == 'POST':
         url_received = request.form['nm']
+        url_received = url_received.strip()
+
+        if url_received == '':
+            return "URL cannot be empty", 400
 
         found_url = Urls.query.filter_by(long=url_received).first()
         if found_url:
